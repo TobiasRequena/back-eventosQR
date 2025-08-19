@@ -32,7 +32,7 @@ services:
     plan: free
     rootDir: services
     buildCommand: npm install
-    startCommand: node participante.js
+    startCommand: node participantes.js
     branch: main
 
   - type: web
