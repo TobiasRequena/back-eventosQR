@@ -1,0 +1,54 @@
+services:
+  - type: web
+    name: login
+    env: node
+    plan: free
+    rootDir: services
+    buildCommand: npm install
+    startCommand: node login.js
+    branch: main
+
+  - type: web
+    name: eventos
+    env: node
+    plan: free
+    rootDir: services
+    buildCommand: npm install
+    startCommand: node eventos.js
+    branch: main
+
+  - type: web
+    name: asistencia
+    env: node
+    plan: free
+    rootDir: services
+    buildCommand: npm install
+    startCommand: node asistencia.js
+    branch: main
+
+  - type: web
+    name: participante
+    env: node
+    plan: free
+    rootDir: services
+    buildCommand: npm install
+    startCommand: node participante.js
+    branch: main
+
+  - type: web
+    name: talleres
+    env: node
+    plan: free
+    rootDir: services
+    buildCommand: npm install
+    startCommand: node talleres.js
+    branch: main
+
+  - type: web
+    name: gateway
+    env: node
+    plan: free
+    rootDir: gateway
+    buildCommand: npm install
+    startCommand: node server.js
+    branch: main

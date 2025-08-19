@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.17.2",
+    "nodemailer": "^7.0.5",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "nodemon": "^3.1.10"
+  },
+  "name": "back",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "scripts": {
+    "dev": "concurrently  \"nodemon services/talleres.js\" \"nodemon services/login.js\" \"nodemon services/participantes.js\" \"nodemon services/eventos.js\" \"nodemon services/asistencia.js\" \"nodemon gateway/server.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TobiasRequena/back-eventosQR.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TobiasRequena/back-eventosQR/issues"
+  },
+  "homepage": "https://github.com/TobiasRequena/back-eventosQR#readme"
+}
