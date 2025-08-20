@@ -45,7 +45,7 @@ services:
     branch: main
 
   - type: web
-    name: gateway
+    name: gatewayQR
     env: node
     plan: free
     rootDir: gateway
