@@ -19,7 +19,7 @@
   "type": "module",
   "description": "",
   "scripts": {
-    "dev": "concurrently  \"nodemon services/talleres.js\" \"nodemon services/login.js\" \"nodemon services/participantes.js\" \"nodemon services/eventos.js\" \"nodemon services/asistencia.js\" \"nodemon gateway/server.js\""
+    "dev": "concurrently  \"nodemon services/talleres.js\" \"nodemon services/login.js\" \"nodemon services/participantes.js\" \"nodemon services/eventos.js\" \"nodemon services/asistencia.js\" \"nodemon gateway/gateway.js\""
   },
   "repository": {
     "type": "git",

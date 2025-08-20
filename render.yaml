@@ -50,5 +50,5 @@ services:
     plan: free
     rootDir: gateway
     buildCommand: npm install
-    startCommand: node server.js
+    startCommand: node gateway.js
     branch: main
