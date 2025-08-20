@@ -48,10 +48,6 @@ app.post("/", async (req, res) => {
     const participante = new Participante({ nombre, email, telefono, tallerId, eventoId });
     await participante.save();
 
-    const participanteConDatos = await Participante.findById(participante._id)
-      .populate("tallerId", "nombre descripcion")
-      .populate("eventoId", "nombre fecha");
-
     // Generar QR con datos completos
     const qrData = {
       participanteId: participante._id,
@@ -75,6 +71,10 @@ app.post("/", async (req, res) => {
     participante.qrCode = qrCodeImage;
     await participante.save();
 
+    const participanteConDatos = await Participante.findById(participante._id)
+      .populate("tallerId", "nombre descripcion")
+      .populate("eventoId", "nombre fecha");
+
     // 📧 Enviar email con QR adjunto
     const mailOptions = {
       from: `"EventosQR" <${process.env.MAIL_USER}>`,
@@ -88,7 +88,7 @@ app.post("/", async (req, res) => {
       `,
       attachments: [
         {
-          filename: "entrada_qr.png",
+          filename: `entrada_qr_${participante._id}.png`,
           content: qrCodeImage.split("base64,")[1],
           encoding: "base64"
         }
