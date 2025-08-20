@@ -6,7 +6,8 @@ const eventoSchema = new mongoose.Schema({
   descripcion: { type: String, default: "" },
   fechaFin: Date,
   lugar: String,
-  creador: { type: mongoose.Schema.Types.ObjectId, ref: "Usuario", required: true } // 🔥 nuevo campo
+  capacidad: { type: Number, default: "" },
+  creador: { type: mongoose.Schema.Types.ObjectId, ref: "Usuario", required: true }
 }, { timestamps: true });
 
 export default mongoose.model("Evento", eventoSchema);

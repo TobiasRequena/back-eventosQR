@@ -79,7 +79,7 @@ app.post("/", async (req, res) => {
     const mailOptions = {
       from: `"EventosQR" <${process.env.MAIL_USER}>`,
       to: email,
-      subject: `🎟️ Tu entrada para el evento ${evento.nombre}`,
+      subject: `🎟️ Tu entrada para el evento "${evento.nombre}"`,
       html: `
         <p>Hola <b>${nombre}</b>,</p>
         <p>Tu inscripción al evento <b>${evento.nombre}</b> fue exitosa.</p>
